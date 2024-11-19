@@ -12,6 +12,12 @@
     <% todoItems.forEach(item => { %>
       <li>
         <%= item.task %>
+         <!-- Display associated comments -->
+         <% if (item.comment) { %>
+            <p>Comment: <%= item.comment %></p>
+          <% } %>
+  
+          
         <a href="/edit/<%= item.id %>">Edit</a>
         <form method="post" action="/delete/<%= item.id %>">
           <button type="submit">Delete</button>

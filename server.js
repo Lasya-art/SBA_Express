@@ -45,11 +45,17 @@ app.set('view engine', 'ejs');
 const indexRoutes = require('./routes/index');
 app.use('/', indexRoutes);
 
+
 // Error-Handling Middleware
 app.use((err, req, res, next) => {
   console.error(`Error occurred: ${err.message}`);
   res.status(500).send('Something went wrong! Please try again later.');
 });
+
+
+
+// const taskRoutes = require("./routes/tasks");
+// app.use("/tasks", taskRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
