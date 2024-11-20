@@ -10,7 +10,7 @@ const error = require("../utilities/error");
 
 // Display all tasks
 router.get('/', (req, res) => {
-  res.json(todoItems); // Sends tasks as JSON for testing
+  res.json(todoItems); 
 });
 
 // Add a new task

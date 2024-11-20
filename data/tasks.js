@@ -1,6 +1,5 @@
-const tasks = [
-    { id: 1, task: "Buy groceries" },
+let todoItems = [
+    { id: 1, task: 'Buy Milk' },
   ];
   
-  module.exports = tasks;
-  
+  module.exports = todoItems;

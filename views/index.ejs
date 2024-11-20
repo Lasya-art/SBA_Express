@@ -11,10 +11,20 @@
   <ul>
     <% todoItems.forEach(item => { %>
       <li>
-        <%= item.task %>
-         <!-- Display associated comments -->
-         <% if (item.comment) { %>
+        <%= item.id %> - <%= item.task %>
+         <!-- Display associated comments changed now -->
+         <!-- <% if (item.comment) { %>
             <p>Comment: <%= item.comment %></p>
+          <% } %> -->
+
+          <% if (item.comments.length > 0) { %>
+            <ul>
+              <% item.comments.forEach(comment => { %>
+                <li><%= comment.text %></li>
+              <% }); %>
+            </ul>
+          <% } else { %>
+            <p>No comments yet.</p>
           <% } %>
   
           

@@ -16,7 +16,7 @@ router.get('/:taskId', (req, res) => {
   res.json(taskComments);
 });
 
-// Add a new comment for a specific task
+
 router.post('/:taskId', (req, res) => {
   const taskId = parseInt(req.params.taskId);
   const { text } = req.body;
